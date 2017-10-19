@@ -1,0 +1,72 @@
+@import "../../common";
+
+.input-container {
+    display: flex;
+    width: 50vw;
+    height: 65px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: $lightBlue;
+    border-radius: 3px;
+
+    background-color: $blue;
+
+    box-shadow: 0 14px 28px transparentize($black, 0.6), 0 10px 10px transparentize($black, 0.6);
+
+    padding: 1%;
+    padding-right: 0;
+
+    input {
+        height: 100%;
+        padding: 0;
+        padding-left: 2.5vw;
+        flex-grow: 1;
+        background-color: $blue;
+        color: $lightCyan;
+        font-size: 3em;
+        border: 0;
+
+        &::placeholder {
+            color: $lightBlue;
+        }
+    }
+
+    button.submit-todo {
+        width: 65px;
+        height: 100%;
+
+        background-color: $blue;
+        color: $blue;
+
+        border: 0;
+        border-left-color: $blue;
+        border-left-style: solid;
+        border-left-width: 1px;
+
+        transition-property: color, border-left-color;
+        transition-duration: .666s;
+        transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+        cursor: text;
+
+        &.active {
+            color: $lightBlue;
+            border-left-color: $lightBlue;
+
+            transition-property: color, border-left-color;
+            transition-duration: .666s;
+            transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+            cursor: pointer;
+
+            &:hover {
+                color: $lightCyan;
+
+                transition-property: color;
+                transition-duration: .666s;
+                transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<div class="task">
+  <button class="status" ng-class="{ complete: $ctrl.completed }"
+    ng-click="$ctrl.toggleTaskStatus()">
+    <icon name="$ctrl.iconName"></icon>
+  </button>
+  <span class="task-text" ng-class="{ complete: $ctrl.completed }">
+    {{ $ctrl.task }}
+  </span>
+</div>
